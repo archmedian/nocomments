@@ -3,8 +3,10 @@ name = "nocomments"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.8.1"
-dependencies = []
+requires-python = ">=3.10.0"
+dependencies = [
+    "urllib3>=2.7.0",
+]
 
 [dependency-groups]
 dev = [
@@ -15,6 +17,7 @@ dev = [
     "pytest-cov>=5.0.0",
     "flake8>=7.1.1",
     "isort>=5.13.2",
+    "pip-audit>=2.7.3",
 ]
 
 [tool.black]
