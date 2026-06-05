@@ -1,0 +1,37 @@
+name: Pytest with Coverage
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: Run pytest with coverage
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2065261becf3332  # v6
+
+      - name: Set up Python
+        uses: actions/setup-python@0a5c61591373683585e88892091a4d50e44537f5  # v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install uv
+          uv sync
+
+      - name: Run pytest with coverage
+        run: |
+          uv run pytest --cov=./ --cov-report=xml --cov-fail-under=100
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@761195298223e9491dfad92b15e20352ce811e0e  # v4
+        with:
+          name: coverage-report
+          path: coverage.xml
