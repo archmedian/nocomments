@@ -1,6 +1,6 @@
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.2.0
+    rev: v6.0.0
     hooks:
     -   id: trailing-whitespace
     -   id: end-of-file-fixer
@@ -29,20 +29,20 @@ repos:
     -   id: requirements-txt-fixer
     -   id: sort-simple-yaml
 -   repo: https://github.com/psf/black
-    rev: 24.8.0
+    rev: 26.5.1
     hooks:
     -   id: black
         args: [--line-length=79]
 -   repo: https://github.com/pycqa/flake8
-    rev: 7.1.1
+    rev: 7.3.0
     hooks:
     -   id: flake8
 -   repo: https://github.com/pycqa/isort
-    rev: 5.13.2
+    rev: 9.0.0a3
     hooks:
     -   id: isort
         args: [--profile=black, --line-length=79]
 -   repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.11.18
+    rev: 0.11.19
     hooks:
     -   id: uv-lock
