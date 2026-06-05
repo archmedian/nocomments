@@ -31,7 +31,7 @@ jobs:
           uv run pytest --cov=./ --cov-report=xml --cov-fail-under=100
 
       - name: Upload coverage report
-        uses: actions/upload-artifact@761195298223e9491dfad92b15e20352ce811e0e  # v4
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
           name: coverage-report
           path: coverage.xml
