@@ -2,4 +2,5 @@ import main
 
 
 def test_main():
-    assert main.main() == "OK"
+    assert main.main(b"OK") == "OK"
+    assert main.main(b"NOT OK") == "NOT OK"
