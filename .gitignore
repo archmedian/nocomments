@@ -57,6 +57,7 @@ fuzz_*
 fuzz_corpus/
 atheris_*
 *.profraw
+crash-*
 
 # Translations
 *.mo
