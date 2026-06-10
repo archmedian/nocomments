@@ -31,6 +31,9 @@ line-length = 79
 exclude_lines = [
     "if __name__ == .__main__.:",
 ]
+omit = [
+    "fuzz_test.py"
+]
 
 [tool.isort]
 profile = "black"
