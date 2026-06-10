@@ -6,7 +6,6 @@ on:
   pull_request:
     branches: [main]
   schedule:
-    # Run fuzzy testing daily at 2 AM UTC
     - cron: '0 2 * * *'
 
 jobs:
@@ -53,7 +52,6 @@ jobs:
   fuzzy-test-extended:
     name: Extended fuzzy testing
     runs-on: ubuntu-latest
-    # Only run on schedule or manually
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
 
     steps:
