@@ -1,4 +1,4 @@
-import main
+from nocomments import main
 
 
 def test_main():

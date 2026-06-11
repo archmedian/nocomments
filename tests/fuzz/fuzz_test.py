@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import sys
 
-from main import main
+from nocomments.main import main
 
 try:
     import atheris
