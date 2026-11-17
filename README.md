@@ -1,2 +1,2 @@
 # nocomments
-A tool to remove comments from soujrce files
+A tool to remove comments from source files
